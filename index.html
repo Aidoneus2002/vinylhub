@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VinylHub — Discover music. Own the experience.">
+  <title>VinylHub — Discover music. Own the experience.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <nav class="nav container">
+
+    <a href="#home" class="logo">
+      <span>VINYL</span>HUB
+    </a>
+
+    <button class="mobile-menu" id="mobileMenu">
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#genres">Genres</a>
+      <a href="#best-sellers">Best Sellers</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="nav-actions">
+
+      <button class="icon-btn" id="searchToggle">
+        ⌕
+      </button>
+
+      <button class="icon-btn" id="wishlistBtn">
+        ♡
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+
+      <button class="cart-btn" id="cartBtn">
+        Cart
+        <span class="badge" id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </nav>
+
+  <div class="search-panel" id="searchPanel">
+
+    <div class="container search-wrap">
+
+      <label for="searchInput">
+        Search the collection
+      </label>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search album, artist or genre..."
+      >
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-bg"></div>
+
+  <div class="container hero-content">
+
+    <p class="eyebrow">
+      THE MODERN RECORD STORE
+    </p>
+
+    <h1>
+      Discover music.
+      <br>
+      <em>Own the experience.</em>
+    </h1>
+
+    <p class="hero-copy">
+      Explore timeless records, discover new sounds,
+      and build a collection that lasts.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#shop" class="btn btn-primary">
+        Explore Collection →
+      </a>
+
+      <a href="#best-sellers" class="btn btn-ghost">
+        View Best Sellers
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-record">
+    <div class="record-disc">
+      <div class="record-label">
+        VH
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FEATURED -->
+
+<section class="section" id="featured">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">
+          HANDPICKED FOR YOU
+        </p>
+
+        <h2>
+          Featured Albums
+        </h2>
+      </div>
+
+      <a href="#shop" class="text-link">
+        View all →
+      </a>
+
+    </div>
+
+    <div class="product-grid" id="featuredGrid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- NEW RELEASES -->
+
+<section class="section section-dark" id="new-releases">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">
+          JUST DROPPED
+        </p>
+
+        <h2>
+          New Releases
+        </h2>
+      </div>
+
+    </div>
+
+    <div class="product-grid" id="newReleasesGrid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- BEST SELLERS -->
+
+<section class="section" id="best-sellers">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">
+          FAN FAVORITES
+        </p>
+
+        <h2>
+          Best Sellers
+        </h2>
+
+      </div>
+
+    </div>
+
+    <div class="product-grid" id="bestSellersGrid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- GENRES -->
+
+<section class="section genres-section" id="genres">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <p class="eyebrow">
+          FIND YOUR SOUND
+        </p>
+
+        <h2>
+          Browse by Genre
+        </h2>
+
+      </div>
+
+    </div>
+
+    <div class="genre-grid">
+
+      <button class="genre-card" data-genre="Rock">
+        <span>01</span>
+        <strong>Rock</strong>
+        <small>Guitars & legends</small>
+      </button>
+
+      <button class="genre-card" data-genre="Pop">
+        <span>02</span>
+        <strong>Pop</strong>
+        <small>Modern essentials</small>
+      </button>
+
+      <button class="genre-card" data-genre="Jazz">
+        <span>03</span>
+        <strong>Jazz</strong>
+        <small>Timeless improvisation</small>
+      </button>
+
+      <button class="genre-card" data-genre="Hip-Hop">
+        <span>04</span>
+        <strong>Hip-Hop</strong>
+        <small>Beats & culture</small>
+      </button>
+
+      <button class="genre-card" data-genre="Electronic">
+        <span>05</span>
+        <strong>Electronic</strong>
+        <small>Future frequencies</small>
+      </button>
+
+      <button class="genre-card" data-genre="Classical">
+        <span>06</span>
+        <strong>Classical</strong>
+        <small>Orchestral beauty</small>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="section shop-section" id="shop">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <p class="eyebrow">
+          THE COLLECTION
+        </p>
+
+        <h2>
+          Shop Vinyl
+        </h2>
+
+      </div>
+
+      <span class="results-count" id="resultsCount"></span>
+
+    </div>
+
+
+    <div class="shop-controls">
+
+      <div class="filter-group">
+
+        <select id="genreFilter">
+
+          <option value="all">
+            All genres
+          </option>
+
+          <option>
+            Rock
+          </option>
+
+          <option>
+            Pop
+          </option>
+
+          <option>
+            Jazz
+          </option>
+
+          <option>
+            Hip-Hop
+          </option>
+
+          <option>
+            Electronic
+          </option>
+
+          <option>
+            Classical
+          </option>
+
+        </select>
+
+
+        <select id="priceFilter">
+
+          <option value="all">
+            All prices
+          </option>
+
+          <option value="under30">
+            Under $30
+          </option>
+
+          <option value="30to40">
+            $30–$40
+          </option>
+
+          <option value="over40">
+            Over $40
+          </option>
+
+        </select>
+
+
+        <select id="ratingFilter">
+
+          <option value="all">
+            All ratings
+          </option>
+
+          <option value="4.8">
+            4.8+ stars
+          </option>
+
+          <option value="4.5">
+            4.5+ stars
+          </option>
+
+          <option value="4.0">
+            4.0+ stars
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <select id="sortSelect">
+
+        <option value="featured">
+          Sort: Featured
+        </option>
+
+        <option value="priceAsc">
+          Price: Low to High
+        </option>
+
+        <option value="priceDesc">
+          Price: High to Low
+        </option>
+
+        <option value="rating">
+          Rating
+        </option>
+
+        <option value="newest">
+          Newest
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div
+      class="product-grid catalog-grid"
+      id="catalogGrid"
+    ></div>
+
+
+    <div
+      class="empty-state hidden"
+      id="noResults"
+    >
+
+      <h3>
+        No records found
+      </h3>
+
+      <p>
+        Try a different search or filter.
+      </p>
+
+      <button
+        class="btn btn-primary"
+        id="clearFilters"
+      >
+        Clear filters
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about-section" id="about">
+
+  <div class="container about-grid">
+
+    <div>
+
+      <p class="eyebrow">
+        OUR STORY
+      </p>
+
+      <h2>
+        Music deserves
+        <br>
+        <em>to be felt.</em>
+      </h2>
+
+    </div>
+
+    <div class="about-copy">
+
+      <p>
+        VinylHub was created for music lovers who believe
+        that listening to music is more than pressing play.
+        We connect listeners with records that deserve
+        a place in their collection.
+      </p>
+
+      <p>
+        Our platform combines technology, e-commerce,
+        and music discovery to make finding your next
+        favorite record effortless.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY VINYLHUB -->
+
+<section class="section why-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <p class="eyebrow">
+          THE VINYLHUB DIFFERENCE
+        </p>
+
+        <h2>
+          Why VinylHub?
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="features-grid">
+
+      <article class="feature">
+        <span>✦</span>
+        <h3>Curated Collection</h3>
+        <p>
+          Thoughtfully selected records for every
+          kind of listener.
+        </p>
+      </article>
+
+      <article class="feature">
+        <span>◈</span>
+        <h3>Secure Shopping</h3>
+        <p>
+          A seamless, trustworthy storefront built
+          around your collection.
+        </p>
+      </article>
+
+      <article class="feature">
+        <span>↗</span>
+        <h3>Fast Delivery</h3>
+        <p>
+          Carefully packed records, moving from
+          our shelves to yours.
+        </p>
+      </article>
+
+      <article class="feature">
+        <span>◎</span>
+        <h3>Music Discovery</h3>
+        <p>
+          Find unexpected favorites through genres,
+          ratings and recommendations.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+  <div class="container newsletter-inner">
+
+    <div>
+
+      <p class="eyebrow">
+        VINYLHUB JOURNAL
+      </p>
+
+      <h2>
+        Stay in the groove.
+      </h2>
+
+      <p>
+        Get new releases, exclusive records,
+        and weekly music recommendations
+        delivered to your inbox.
+      </p>
+
+    </div>
+
+
+    <form
+      id="newsletterForm"
+      class="newsletter-form"
+    >
+
+      <label
+        for="emailInput"
+        class="sr-only"
+      >
+        Email address
+      </label>
+
+      <input
+        id="emailInput"
+        type="email"
+        placeholder="Your email address"
+        required
+      >
+
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Subscribe
+      </button>
+
+      <p
+        class="form-message"
+        id="newsletterMessage"
+      ></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="container footer-grid">
+
+    <div>
+
+      <a class="logo" href="#home">
+        <span>VINYL</span>HUB
+      </a>
+
+      <p>
+        Discover music. Own the experience.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Explore
+      </h4>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#shop">
+        Shop
+      </a>
+
+      <a href="#home">
+        Contact
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Information
+      </h4>
+
+      <a href="#home">
+        Privacy
+      </a>
+
+      <a href="#home">
+        Terms
+      </a>
+
+      <a href="#home">
+        Shipping
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Follow
+      </h4>
+
+      <div class="socials">
+
+        <a href="#" aria-label="Instagram">
+          IG
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          FB
+        </a>
+
+        <a href="#" aria-label="Spotify">
+          SP
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © 2026 VinylHub. All rights reserved.
+    </span>
+
+    <span>
+      Independent digital storefront prototype.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- PRODUCT MODAL -->
+
+<div
+  class="modal-backdrop hidden"
+  id="productModal"
+>
+
+  <div
+    class="modal product-modal"
+    role="dialog"
+    aria-modal="true"
+  >
+
+    <button
+      class="modal-close"
+      data-close="productModal"
+    >
+      ×
+    </button>
+
+    <div id="productDetails"></div>
+
+  </div>
+
+</div>
+
+
+<!-- CART -->
+
+<aside
+  class="side-panel"
+  id="cartPanel"
+>
+
+  <div class="panel-header">
+
+    <h2>
+      Your Cart
+    </h2>
+
+    <button
+      class="modal-close"
+      id="closeCart"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <div
+    class="panel-content"
+    id="cartContent"
+  ></div>
+
+</aside>
+
+
+<div
+  class="drawer-backdrop hidden"
+  id="drawerBackdrop"
+></div>
+
+
+<!-- WISHLIST -->
+
+<aside
+  class="side-panel wishlist-panel"
+  id="wishlistPanel"
+>
+
+  <div class="panel-header">
+
+    <h2>
+      Your Wishlist
+    </h2>
+
+    <button
+      class="modal-close"
+      id="closeWishlist"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <div
+    class="panel-content"
+    id="wishlistContent"
+  ></div>
+
+</aside>
+
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
